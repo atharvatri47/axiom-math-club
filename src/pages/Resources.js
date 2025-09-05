@@ -30,8 +30,7 @@ const books = [
 const resources = [
   {
     title: "Mathematical Olympiad Handbooks",
-    description:
-      "Collection of handbooks from various mathematical olympiads worldwide",
+    description: "Collection of handbooks from various mathematical olympiads worldwide",
     icon: BookOpen,
     type: "PDF Collection",
     color: "from-green-400 to-green-600",
@@ -67,8 +66,7 @@ const resources = [
   },
   {
     title: "Mathematics Competition Links",
-    description:
-      "Official websites and registration links for major competitions",
+    description: "Official websites and registration links for major competitions",
     icon: ExternalLink,
     type: "External Links",
     color: "from-indigo-400 to-indigo-600",
@@ -129,9 +127,7 @@ export default function Resources() {
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
                     {book.title}
                   </h3>
-                  <p className="text-blue-400 font-medium mb-4">
-                    {book.author}
-                  </p>
+                  <p className="text-blue-400 font-medium mb-4">{book.author}</p>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {book.description}
                   </p>
@@ -142,7 +138,9 @@ export default function Resources() {
                         className="w-5 h-5 fill-yellow-400 text-yellow-400"
                       />
                     ))}
-                    <span className="text-gray-400 ml-2">({book.rating}/5)</span>
+                    <span className="text-gray-400 ml-2">
+                      ({book.rating}/5)
+                    </span>
                   </div>
                   <div>
                     <a
@@ -155,7 +153,6 @@ export default function Resources() {
                       Access Materials
                     </a>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/5 to-yellow-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
             ))}
@@ -202,8 +199,8 @@ export default function Resources() {
                   </p>
                   <a
                     href={resource.link || "#"}
-                    target={resource.link ? "_blank" : "_self"}
-                    rel={resource.link ? "noopener noreferrer" : ""}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-2 px-4 rounded-lg font-semibold block text-center transition-all duration-200 ${
                       resource.link
                         ? "bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:scale-105"
@@ -212,7 +209,6 @@ export default function Resources() {
                   >
                     {resource.link ? "Access Resource" : "Coming Soon"}
                   </a>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/5 to-yellow-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
             ))}

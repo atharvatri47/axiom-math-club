@@ -1,18 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Import member images
+import atharv from "../assets/members/atharvatri.jpg";
+import sanvi from "../assets/members/sanvisachdeva.jpg";
+import shubana from "../assets/members/shubanaggarwal.jpg";
+import reyansh from "../assets/members/reyanshmunjal.jpg";
+import gurnoor from "../assets/members/gurnoorbhatia.jpg";
+import aadvik from "../assets/members/aadviknautiyal.jpg";
+
 const members = [
-  { name: "Sanvi Sachdeva", role: "President", position: "top", image: "/members/sanvisachdeva.jpg" },
-  { name: "Shuban Aggarwal", role: "President", position: "top", image: "/members/shubanaggarwal.jpg" },
-  { name: "Atharv Atri", role: "Vice President", position: "second", image: "/members/atharvatri.jpg" },
-  { name: "Reyansh Munjal", role: "Vice President", position: "second", image: "/members/reyanshmunjal.jpg" },
-  { name: "Gurnoor Bhatia", role: "Vice President", position: "second", image: "/members/gurnoorbhatia.jpg" },
-  { name: "Aadvik Nautiyal", role: "Vice President", position: "second", image: "/members/aadviknautiyal.jpg" }
+  { name: "Sanvi Sachdeva", role: "President", position: "top", image: sanvi },
+  { name: "Shuban Aggarwal", role: "President", position: "top", image: shubana },
+  { name: "Atharv Atri", role: "Vice President", position: "second", image: atharv },
+  { name: "Reyansh Munjal", role: "Vice President", position: "second", image: reyansh },
+  { name: "Gurnoor Bhatia", role: "Vice President", position: "second", image: gurnoor },
+  { name: "Aadvik Nautiyal", role: "Vice President", position: "second", image: aadvik },
 ];
 
 export default function Members() {
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Page Heading */}
         <motion.div

@@ -2,15 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const members = [
-  // Top row - Presidents
-  { name: "Sanvi Sachdeva", role: "President", position: "top" },
-  { name: "Shuban Aggarwal", role: "President", position: "top" },
-  
-  // Second row - Vice Presidents
-  { name: "Atharv Atri", role: "Vice President", position: "second" },
-  { name: "Reyansh Munjal", role: "Vice President", position: "second" },
-  { name: "Gurnoor Bhatia", role: "Vice President", position: "second" },
-  { name: "Aadvik Nautiyal", role: "Vice President", position: "second" }
+  { name: "Sanvi Sachdeva", role: "President", position: "top", image: "/members/sanvisachdeva.jpg" },
+  { name: "Shuban Aggarwal", role: "President", position: "top", image: "/members/shubanaggarwal.jpg" },
+  { name: "Atharv Atri", role: "Vice President", position: "second", image: "/members/atharvatri.jpg" },
+  { name: "Reyansh Munjal", role: "Vice President", position: "second", image: "/members/reyanshmunjal.jpg" },
+  { name: "Gurnoor Bhatia", role: "Vice President", position: "second", image: "/members/gurnoorbhatia.jpg" },
+  { name: "Aadvik Nautiyal", role: "Vice President", position: "second", image: "/members/aadviknautiyal.jpg" }
 ];
 
 export default function Members() {
@@ -43,10 +40,11 @@ export default function Members() {
           {members.filter(m => m.position === "top").map((member, index) => (
             <div key={index} className="group text-center">
               <div className="relative mb-6">
-                <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-yellow-400 to-blue-500 rounded-full flex items-center justify-center text-4xl md:text-5xl font-bold text-black mb-4 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-yellow-500/30 transition-all duration-300">
-                  {member.name.split(" ").map(n => n.charAt(0)).join("")}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-yellow-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300"
+                />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
                 {member.name}
@@ -66,10 +64,11 @@ export default function Members() {
           {members.filter(m => m.position === "second").map((member, index) => (
             <div key={index} className="group text-center">
               <div className="relative mb-6">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-400 to-green-500 rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold text-black mb-4 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300">
-                  {member.name.split(" ").map(n => n.charAt(0)).join("")}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300"
+                />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                 {member.name}

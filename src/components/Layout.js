@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                 <Link
                   key={item.title}
                   to={item.url}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  className={`nav-link-hover px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === item.url
                       ? "text-yellow-400"
                       : "text-gray-300 hover:text-white"
@@ -77,7 +77,7 @@ export default function Layout({ children }) {
               <Link
                 key={item.title}
                 to={item.url}
-                className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                className={`nav-link-hover block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   location.pathname === item.url
                     ? "text-yellow-400"
                     : "text-gray-300 hover:text-white"
